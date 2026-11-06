@@ -1,9 +1,9 @@
 from pathlib import Path
 
 import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 import numpy as np
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt  # noqa: E402 - select the noninteractive backend before pyplot
 
 
 def qq_values(pvalues):

@@ -1,6 +1,7 @@
 name: Gene pipeline CI
 on:
   push:
+  pull_request:
   workflow_dispatch:
 permissions:
   contents: read
@@ -8,9 +9,9 @@ defaults:
   run:
     shell: bash
 jobs:
-  capture-public-fixtures:
+  pipeline:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -20,12 +21,34 @@ jobs:
         run: |
           mkdir -p artifacts
           python -m pip install -e '.[test,ci]' 2>&1 | tee artifacts/install.log
-      - name: Capture public reference responses and generate synthetic inputs
-        run: python ci/record.py 2>&1 | tee artifacts/record.log
+          python -m pip freeze > artifacts/dependencies.txt
+      - name: Bootstrap genuine public API recordings if absent
+        run: |
+          if [[ ! -f data/recordings/index.json ]]; then
+            python ci/record.py 2>&1 | tee artifacts/record.log
+          fi
+      - name: Ruff
+        run: ruff check src tests ci 2>&1 | tee artifacts/ruff.log
+      - name: Offline tests and minimum 85 percent line coverage
+        run: |
+          pytest --cov=gene_lab --cov-fail-under=85 --cov-report=term-missing --cov-report=xml:artifacts/coverage.xml --cov-report=json:artifacts/coverage.json --cov-report=html:artifacts/coverage-html --junitxml=artifacts/tests.xml 2>&1 | tee artifacts/pytest.log
+      - name: Build Docker image on the runner
+        run: docker build -t gene-pipeline-lab . 2>&1 | tee artifacts/docker-build.log
+      - name: Run whole pipeline in container without network
+        run: |
+          mkdir -p artifacts/container
+          chmod 0777 artifacts/container
+          docker run --rm --network none -v "$PWD/artifacts/container:/app/artifacts" gene-pipeline-lab 2>&1 | tee artifacts/container.log
+      - name: Verify dimensions, planted effect and HTML report
+        run: |
+          python -m playwright install --only-shell chromium
+          python ci/verify.py 2>&1 | tee artifacts/verification.log
+      - name: Measure real test and coverage reports
+        run: python ci/measure.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: public-api-recordings
+          name: gene-pipeline-results
           path: |
             data/
             artifacts/

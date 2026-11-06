@@ -2,10 +2,10 @@ import csv
 from pathlib import Path
 
 import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt  # noqa: E402 - select the noninteractive backend before pyplot
 
 
 def summarize_expression(path, symbols, store):

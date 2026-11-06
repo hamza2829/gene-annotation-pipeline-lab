@@ -52,6 +52,11 @@ class CaptureSession:
         self.session = requests.Session()
 
     def request(self, method, url, params=None, json=None, **kwargs):
+        key = request_key(method, url, params, json)
+        if (self.directory / f"{key}.json").is_file():
+            print(f"Reuse captured response: {method} {url}", flush=True)
+            return RecordedSession(self.directory).request(method, url, params, json)
+        print(f"Capture public response: {method} {url}", flush=True)
         response = self.session.request(method, url, params=params, json=json, **kwargs)
         if response.status_code < 400:
             key = request_key(method, url, params, json)
@@ -120,6 +125,7 @@ class HttpClient:
                 return data
             except requests.RequestException as error:
                 if attempt + 1 == self.config["attempts"]:
-                    raise ApiError(f"{method} {url}: failed after {attempt + 1} attempts ({type(error).__name__})") from error
+                    status = f" HTTP {response.status_code}" if response is not None else ""
+                    raise ApiError(f"{method} {url}: failed after {attempt + 1} attempts{status} ({type(error).__name__})") from error
                 self.sleep(self.delay(response, attempt))
         raise ApiError("No request attempts configured")

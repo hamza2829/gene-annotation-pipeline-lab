@@ -9,7 +9,17 @@ def fetch_genes(symbols, client, config, store):
         raw[symbol] = {}
         gene = None
         try:
-            gene = client.json("GET", f"{config['ensembl_url']}/lookup/symbol/{config['species']}/{quote(symbol)}", {"expand": 1})
+            lookup = f"{config['ensembl_url']}/lookup/symbol/{config['species']}/{quote(symbol)}"
+            try:
+                gene = client.json("GET", lookup, {"expand": 1})
+            except ApiError:
+                gene = client.json("GET", lookup)
+                if not isinstance(gene, dict) or "id" not in gene:
+                    raise ApiError("Basic Ensembl lookup omitted a gene id")
+                transcript_rows = client.json("GET", f"{config['ensembl_url']}/overlap/id/{gene['id']}", {"feature": "transcript"})
+                if not isinstance(transcript_rows, list):
+                    raise ApiError("Ensembl transcript overlap is not an array")
+                gene["Transcript"] = transcript_rows
             if not isinstance(gene, dict) or not all(key in gene for key in ["id", "seq_region_name", "start", "end", "assembly_name"]):
                 raise ApiError("Ensembl lookup omitted required gene coordinates")
             if gene["assembly_name"] != config["assembly"]:
@@ -47,8 +57,9 @@ def fetch_genes(symbols, client, config, store):
                     raise ApiError("RNAcentral response has no overlap array")
                 raw[symbol]["rnacentral"] = data
                 for index, entry in enumerate(entries):
-                    ncrna.append({"symbol": symbol, "entry_id": str(entry.get("id", entry.get("rnacentral_id", f"overlap-{index + 1}"))),
-                        "description": str(entry.get("description", entry.get("biotype", "RNAcentral coordinate overlap"))), "mapping": region})
+                    mapping = f"{entry.get('seq_region_name', gene['seq_region_name'])}:{entry.get('start', gene['start'])}-{entry.get('end', gene['end'])}"
+                    ncrna.append({"symbol": symbol, "entry_id": str(entry.get("ID", entry.get("id", entry.get("rnacentral_id", f"overlap-{index + 1}")))),
+                        "description": str(entry.get("description", entry.get("biotype", "RNAcentral coordinate overlap"))), "mapping": mapping})
                 statuses.append({"symbol": symbol, "provider": "RNAcentral", "status": "ok" if entries else "empty", "count": len(entries), "message": "coordinate overlap, not gene-symbol equivalence"})
             except ApiError as error:
                 statuses.append({"symbol": symbol, "provider": "RNAcentral", "status": "error", "count": 0, "message": str(error)})
