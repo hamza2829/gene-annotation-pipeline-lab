@@ -27,7 +27,7 @@ def test_full_chain_on_genuine_recordings_and_synthetic_data(config, store):
     symbols = read_genes("data/genes.txt")
     fetch_stage(symbols, client, config, store)
     annotated = annotate_stage(client, config, store)
-    assert len(annotated) == 200 and any(row["vep_status"] == "ok" for row in annotated)
+    assert len(annotated) == 200 and all(row["vep_status"] == "ok" for row in annotated)
     assert all(row["overlapping_genes"] for row in annotated)
     associate_stage(config, store)
     path = report_stage(symbols, config, store)

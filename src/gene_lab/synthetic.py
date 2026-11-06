@@ -18,7 +18,7 @@ def make_vcf(genes, sequences, path):
             ref = sequence[offset:offset + (3 if index >= 16 else 1)]
             alt = next(base for base in "ACGT" if base != ref[0]) if index < 12 else ref + "AC" if index < 16 else ref[0]
             rows.append(Variant(str(gene["chrom"]), int(gene["start"]) + int(offset), f"SYN{len(rows) + 1:04}", ref, alt))
-    lines = ["##fileformat=VCFv4.2", "##reference=GRCh38", "##source=Synthetic_variants_using_public_reference_sequence", "#CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO"]
+    lines = ["##fileformat=VCFv4.2", "##reference=GRCh38", "##source=Synthetic_variants_using_public_reference_sequence", '##INFO=<ID=SYNTHETIC,Number=1,Type=Integer,Description="Artificial variant marker">', "#CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO"]
     lines += [f"{row.chrom}\t{row.pos}\t{row.identifier}\t{row.ref}\t{row.alt}\t.\tPASS\tSYNTHETIC=1" for row in rows]
     Path(path).write_text("\n".join(lines) + "\n", encoding="utf-8")
     return rows

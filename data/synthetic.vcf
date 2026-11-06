@@ -1,6 +1,7 @@
 ##fileformat=VCFv4.2
 ##reference=GRCh38
 ##source=Synthetic_variants_using_public_reference_sequence
+##INFO=<ID=SYNTHETIC,Number=1,Type=Integer,Description="Artificial variant marker">
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
 17	43044297	SYN0001	G	A	.	PASS	SYNTHETIC=1
 17	43050925	SYN0002	A	C	.	PASS	SYNTHETIC=1

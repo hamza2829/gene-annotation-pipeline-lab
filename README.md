@@ -90,15 +90,27 @@ Docker runs only on the GitHub runner for this task. The image installs the Pyth
 
 <!-- CI_METRICS_START -->
 | Metric | Measured in CI |
-| --- | --- |
-| Passed tests and coverage | Awaiting a completed full CI run |
+| --- | ---: |
+| Passed pytest cases | 76 |
+| Live tests intentionally skipped | 1 |
+| Line coverage | 98.12% (625 / 637 lines) |
+| Failures | 0 |
+| Gene regions / transcripts / reviewed proteins | 10 / 363 / 8 |
+| RNAcentral overlap features | 16,406 |
+| Synthetic VCF alleles with VEP answers | 200 / 200 |
+| Artificial samples / association markers | 2000 / 300 |
+| Failed logistic fits in the demo | 0 |
 <!-- CI_METRICS_END -->
 
-CI requires at least 40 passed tests and at least 85 percent line coverage. The results table will use actual JUnit and coverage XML, and will show the intentionally skipped live test separately. No performance, discovery or predictive-accuracy claim is inferred from coverage.
+Measured on 6 November 2026 in [CI run 42237477935](https://github.com/hamza2829/gene-annotation-pipeline-lab/actions/runs/42237477935), commit `43b49942d449fa6bd58b1259ee28801b4dfb167b`. The actual [measurement JSON](docs/ci-measurements.json) and [container verification](docs/pipeline-proof.json) are preserved from that run. The planted SIM0043 marker passed both Bonferroni tests; its logistic Bonferroni-adjusted p-value was about `6.68e-68` for this synthetic seed. The container ran with `--network none`, and the report check found ten gene cards, three embedded plots and zero browser errors.
+
+CI requires at least 40 passed tests and at least 85 percent line coverage. The table uses actual JUnit, coverage XML and pipeline outputs. The live test is shown separately. No performance, discovery or predictive-accuracy claim is inferred from coverage or the planted signal.
 
 ## Sample plot
 
-The actual CI-generated Manhattan plot will be added after the full pipeline passes.
+This is the actual [CI-generated Manhattan plot](docs/manhattan.png) from the run above. The red point is the deliberately planted effect, not a discovered disease association. The separate [QQ plot](docs/qq.png) and [toy expression plot](docs/expression.png) are also preserved from CI.
+
+![CI-generated synthetic Manhattan plot with planted marker SIM0043](docs/manhattan.png)
 
 ## Limitations
 

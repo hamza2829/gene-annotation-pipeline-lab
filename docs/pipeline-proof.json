@@ -1,0 +1,26 @@
+{
+  "counts": {
+    "genes": 10,
+    "variants": 200,
+    "association": 300,
+    "transcripts": 363,
+    "proteins": 8,
+    "ncrna": 16406
+  },
+  "association": {
+    "samples": 2000,
+    "markers": 300,
+    "cases": 942,
+    "controls": 1058,
+    "planted_id": "SIM0043",
+    "planted_detected": true,
+    "logistic_p": 2.225693232461254e-70,
+    "logistic_bonferroni": 6.677079697383762e-68,
+    "chi2_p": 9.533681444939655e-84,
+    "failed_logistic_fits": 0
+  },
+  "docker_network": "none",
+  "browser_errors": [],
+  "gene_cards": 10,
+  "embedded_plots": 3
+}

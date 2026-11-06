@@ -1,0 +1,36 @@
+{
+  "passed_tests": 76,
+  "live_skipped": 1,
+  "failures": 0,
+  "line_coverage_percent": 98.12,
+  "covered_lines": 625,
+  "measured_lines": 637,
+  "pipeline": {
+    "counts": {
+      "genes": 10,
+      "variants": 200,
+      "association": 300,
+      "transcripts": 363,
+      "proteins": 8,
+      "ncrna": 16406
+    },
+    "association": {
+      "samples": 2000,
+      "markers": 300,
+      "cases": 942,
+      "controls": 1058,
+      "planted_id": "SIM0043",
+      "planted_detected": true,
+      "logistic_p": 2.225693232461254e-70,
+      "logistic_bonferroni": 6.677079697383762e-68,
+      "chi2_p": 9.533681444939655e-84,
+      "failed_logistic_fits": 0
+    },
+    "docker_network": "none",
+    "browser_errors": [],
+    "gene_cards": 10,
+    "embedded_plots": 3
+  },
+  "commit": "43b49942d449fa6bd58b1259ee28801b4dfb167b",
+  "run_url": "https://github.com/hamza2829/gene-annotation-pipeline-lab/actions/runs/42237477935"
+}
