@@ -125,3 +125,17 @@ def test_recordings_have_provenance_and_are_not_invented():
     for record in index["records"]:
         assert record["url"].startswith("https://") and len(record["wire_sha256"]) == 64 and record["retrieved_at"]
         assert (Path("data/recordings") / record["file"]).exists()
+
+
+def test_transcript_fallback_only_keeps_the_requested_gene(config, store):
+    class Fallback:
+        def json(self, method, url, params=None):
+            if params == {"expand": 1}:
+                raise ApiError("synthetic expanded lookup failure")
+            if "lookup" in url:
+                return {"id": "G", "seq_region_name": "1", "start": 10, "end": 20, "assembly_name": "GRCh38"}
+            if "/overlap/id/" in url:
+                return [{"id": "T1", "Parent": "G", "start": 10, "end": 20}, {"id": "T2", "Parent": "OTHER", "start": 10, "end": 20}]
+            return {"results": []}
+    fetch_genes(["SYN"], Fallback(), config, store)
+    assert store.read("transcripts")["transcript_id"].tolist() == ["T1"]

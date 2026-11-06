@@ -1,7 +1,6 @@
 import base64
 from html import escape
 import json
-from pathlib import Path
 
 
 def table(frame, columns):

@@ -1,4 +1,5 @@
 import json
+import math
 
 from .association import association
 from .expression import summarize_expression
@@ -35,8 +36,9 @@ def associate_stage(config, store):
     detected = bool(planted["logistic_bonferroni"] < config["alpha"] and planted["chi2_bonferroni"] < config["alpha"])
     store.metadata("association-summary", {"samples": int(matrix.shape[0]), "markers": int(matrix.shape[1]), "cases": int(phenotype.sum()),
         "controls": int(len(phenotype) - phenotype.sum()), "planted_id": planted_id, "planted_detected": detected,
-        "logistic_p": float(planted["logistic_p"]), "logistic_bonferroni": float(planted["logistic_bonferroni"]),
-        "chi2_p": float(planted["chi2_p"]), "failed_logistic_fits": int((frame["logistic_status"] != "ok").sum())})
+        "logistic_p": float(planted["logistic_p"]) if math.isfinite(planted["logistic_p"]) else None,
+        "logistic_bonferroni": float(planted["logistic_bonferroni"]) if math.isfinite(planted["logistic_bonferroni"]) else None,
+        "chi2_p": float(planted["chi2_p"]) if math.isfinite(planted["chi2_p"]) else None, "failed_logistic_fits": int((frame["logistic_status"] != "ok").sum())})
     make_plots(frame, store.directory, config["alpha"], planted_id)
     if not detected:
         raise ValueError("The planted marker did not pass both Bonferroni tests for this simulation configuration")

@@ -19,7 +19,7 @@ def fetch_genes(symbols, client, config, store):
                 transcript_rows = client.json("GET", f"{config['ensembl_url']}/overlap/id/{gene['id']}", {"feature": "transcript"})
                 if not isinstance(transcript_rows, list):
                     raise ApiError("Ensembl transcript overlap is not an array")
-                gene["Transcript"] = transcript_rows
+                gene["Transcript"] = [row for row in transcript_rows if row.get("Parent", row.get("gene_id")) == gene["id"]]
             if not isinstance(gene, dict) or not all(key in gene for key in ["id", "seq_region_name", "start", "end", "assembly_name"]):
                 raise ApiError("Ensembl lookup omitted required gene coordinates")
             if gene["assembly_name"] != config["assembly"]:

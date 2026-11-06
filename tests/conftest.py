@@ -20,8 +20,8 @@ def no_network(request):
                 continue
             record = json.loads(path.read_text())
             matching = []
-            if record.get("params"):
-                matching.append(matchers.query_param_matcher({key: str(value) for key, value in record["params"].items()}))
+            if record["method"] == "GET":
+                matching.append(matchers.query_param_matcher({key: str(value) for key, value in (record.get("params") or {}).items()}))
             if record.get("request_body") is not None:
                 matching.append(matchers.json_params_matcher(record["request_body"]))
             mock.add(record["method"], record["url"], json=record["body"], status=record["status"], match=matching)

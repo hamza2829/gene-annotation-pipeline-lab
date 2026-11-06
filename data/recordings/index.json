@@ -1,0 +1,313 @@
+{
+  "source": "Actual public HTTP responses captured in GitHub Actions",
+  "records": [
+    {
+      "file": "05b2af586fe81035c6f2cbc3f434f8165418bb4404854dbc60007076914347c6.json",
+      "method": "GET",
+      "url": "https://rest.uniprot.org/uniprotkb/search",
+      "retrieved_at": "2026-11-06T14:37:13.442830+00:00",
+      "wire_sha256": "2171ba86f82300276bb692de33417a3d09a51602fec582e0a04bf5f5fb9b33c5"
+    },
+    {
+      "file": "0e1eb5258a1ca9c6be508b65d94a5e7511c528fec6548b615aab7ab11cb6574e.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/sequence/region/homo_sapiens/7:117287120..117715971:1",
+      "retrieved_at": "2026-11-06T14:47:11.392687+00:00",
+      "wire_sha256": "4705677151f440280852d3d827ac905faf71c63d97a499c493bca48f6515a1c5"
+    },
+    {
+      "file": "113bcb6b93b8e8fb18b3d19d92937fc571948e7571530c5490a7a9fa14fb34bb.json",
+      "method": "GET",
+      "url": "https://rest.uniprot.org/uniprotkb/search",
+      "retrieved_at": "2026-11-06T14:38:41.313560+00:00",
+      "wire_sha256": "1c20ffe54dbe7c1025582e0311e158495630d3550fefee42ea229390efd82417"
+    },
+    {
+      "file": "1df4d2d0f166a189b5daaedbf9f1f5625f17d21574f586a131198dcb4fc45020.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/sequence/region/homo_sapiens/7:55018820..55211628:1",
+      "retrieved_at": "2026-11-06T14:46:37.236528+00:00",
+      "wire_sha256": "97a525e11a52f3ec2726bccedb9404e9850d75f7b67af1c44514c44d7f6e293e"
+    },
+    {
+      "file": "26e215d1c465e6521bf379ab957ff269b63dcbf12810ee4935cd0e0435ff706d.json",
+      "method": "GET",
+      "url": "https://rest.uniprot.org/uniprotkb/search",
+      "retrieved_at": "2026-11-06T14:37:34.980163+00:00",
+      "wire_sha256": "c79a4b82c7e306819d3ea6ef90f7f607ce0df5560a2bb8e71fca835db390b4b1"
+    },
+    {
+      "file": "27bcb2badcbba2e7d338cf1c1a07ab238883726032e3b6af48dff45587fd50a7.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/sequence/region/homo_sapiens/12:25205246..25326473:1",
+      "retrieved_at": "2026-11-06T14:48:19.237175+00:00",
+      "wire_sha256": "678cebff1e8bdad5a14144a3889cad4453ebb00e8ffe95bc58c1daa2ce5f0405"
+    },
+    {
+      "file": "28191ec9d0495f6a0930c50bf464b4d0f84e10a2085da7ebaeff016935152e9f.json",
+      "method": "GET",
+      "url": "https://rnacentral.org/api/v1/overlap/region/homo_sapiens/12:25205246-25326473",
+      "retrieved_at": "2026-11-06T14:39:15.962619+00:00",
+      "wire_sha256": "d68babdc2f5a81587225e0f619a140b9750b465160874a500efafe4304b487b6"
+    },
+    {
+      "file": "40bce51d40982826a895df52c0bf934eb773a17ee6f19bfa75d01564bf1be8eb.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/sequence/region/homo_sapiens/19:44903787..44909396:1",
+      "retrieved_at": "2026-11-06T14:47:30.426989+00:00",
+      "wire_sha256": "d09d905d5e631efdede8ed34e8d014246f9e098a24e424d8ad8f88a614f7c92e"
+    },
+    {
+      "file": "420cf1b123e990cd24732a8d75ca15da1dfb0cee52680407759553492b25f9d2.json",
+      "method": "GET",
+      "url": "https://rnacentral.org/api/v1/overlap/region/homo_sapiens/11:65497606-65508073",
+      "retrieved_at": "2026-11-06T14:40:33.892198+00:00",
+      "wire_sha256": "c6664a69352f5686db4b817860a56ff7fc6a237633b09f08469c692c9f052fcf"
+    },
+    {
+      "file": "478008fef80aee9c184f733b4320b5959316541777453ef89446baf59cf52fba.json",
+      "method": "GET",
+      "url": "https://rest.uniprot.org/uniprotkb/search",
+      "retrieved_at": "2026-11-06T14:39:55.455118+00:00",
+      "wire_sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+    },
+    {
+      "file": "4ccfe7c0d4eb2bc59c9e76d1bb0241a3c4c9fc754cbcdeb2d726e08d1d7307ad.json",
+      "method": "GET",
+      "url": "https://rnacentral.org/api/v1/overlap/region/homo_sapiens/17:7661779-7687546",
+      "retrieved_at": "2026-11-06T14:37:38.303533+00:00",
+      "wire_sha256": "266ba3bc9b521628c1053153864862e4b141f8db7c84d3d73a876e3e4aa7a18e"
+    },
+    {
+      "file": "52d20d0b9662aae14d892f5317ac241d41fa3e5a25c4af0793d550f77f772152.json",
+      "method": "GET",
+      "url": "https://rnacentral.org/api/v1/overlap/region/homo_sapiens/11:65422774-65445540",
+      "retrieved_at": "2026-11-06T14:41:11.331298+00:00",
+      "wire_sha256": "f762e835270e180fe4cb0d07e71a88989a8425f004f3cccd4d50b9408b29c44d"
+    },
+    {
+      "file": "582c2801a931e1f98eacf227cb43e03ed1b53430fcec09ce1109d1a9330289de.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/lookup/symbol/homo_sapiens/HBB",
+      "retrieved_at": "2026-11-06T14:38:40.148194+00:00",
+      "wire_sha256": "15ad4dd2f3001174ab8b3d9d2062b6e8370f751c2aad9f9b7d3ac8f6164f0dad"
+    },
+    {
+      "file": "593d9fdb5edcd39b011121836378396afad86bd19d3b15a225446610b3f55f71.json",
+      "method": "POST",
+      "url": "https://rest.ensembl.org/vep/homo_sapiens/region",
+      "retrieved_at": "2026-11-06T14:48:52.964501+00:00",
+      "wire_sha256": "8b83e5379599e5b6392c9efb7e9efc996fc92cb4a5b10cba6a3c5f72a00cab89"
+    },
+    {
+      "file": "5e7df43b630895c4af7bcb1989855b0448617501aafc4145ecb373e81b69b0bf.json",
+      "method": "GET",
+      "url": "https://rnacentral.org/api/v1/overlap/region/homo_sapiens/17:43044292-43170245",
+      "retrieved_at": "2026-11-06T14:37:05.767228+00:00",
+      "wire_sha256": "33ba01c3271704fc39419f5634c2075f2a3a0838b68b72d43d2a4d6991314780"
+    },
+    {
+      "file": "5f1b2c2bfdde45998b682d79b839d6f4ee4788b38e237ec493f9a0355b4bd379.json",
+      "method": "POST",
+      "url": "https://rest.ensembl.org/vep/homo_sapiens/region",
+      "retrieved_at": "2026-11-06T14:48:56.502743+00:00",
+      "wire_sha256": "c1394e94adfb6fb7442c3ceb506bba328e86333d95fad10afa714a184618cc1a"
+    },
+    {
+      "file": "64ed5934fbe25500531c8fccba7e8af55dd2af3618c842086f8c18c37f3e0416.json",
+      "method": "GET",
+      "url": "https://rest.uniprot.org/uniprotkb/search",
+      "retrieved_at": "2026-11-06T14:38:04.779331+00:00",
+      "wire_sha256": "ad771812a4e822b57e7677f7af998e0ea0242d83a7a1742dfbe478eb14c314fd"
+    },
+    {
+      "file": "6934ec21f370abb161fcd9d12245fc04e6a00bd0b6e295a6a06c45bd4c9fd021.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/sequence/region/homo_sapiens/17:7661779..7687546:1",
+      "retrieved_at": "2026-11-06T14:46:31.240849+00:00",
+      "wire_sha256": "6f13017b89a8d1ec31242c0dbfcad1a48960f57d4c86f64e8cfc5418e2033992"
+    },
+    {
+      "file": "6aa23dbb303a78d0a4c3493055778aeb271200ff0afe760f602c7b870fafb7f7.json",
+      "method": "GET",
+      "url": "https://rnacentral.org/api/v1/overlap/region/homo_sapiens/7:55018820-55211628",
+      "retrieved_at": "2026-11-06T14:37:58.264819+00:00",
+      "wire_sha256": "901917b9fd43a6e6a47a6c50969fbb2f72a85b4ea3e7241b4af5f8c096f3a3ca"
+    },
+    {
+      "file": "7646da0ed1e8eaea48aa8421b46c929efa98272c1c98ad0c1e1c12bffbd5d447.json",
+      "method": "GET",
+      "url": "https://rest.uniprot.org/uniprotkb/search",
+      "retrieved_at": "2026-11-06T14:39:11.066359+00:00",
+      "wire_sha256": "b6161420e86dfcac80e7535ca6e0c76ca53541e4ce465c7a1ddc6700b730b30a"
+    },
+    {
+      "file": "8a31c4c539c65421220f8a4a858fc3916488b2ae9b36b9d9e0c806d8957d2166.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/sequence/region/homo_sapiens/11:65497606..65508073:1",
+      "retrieved_at": "2026-11-06T14:48:43.902294+00:00",
+      "wire_sha256": "20603eac668689a8a2476afae147d8311e920ae0b4e44691e5e4d1643684bb26"
+    },
+    {
+      "file": "8b636e4f1d934a5994ee6979f3cbb300fbcfa48be9c6a0db5ae18f0f78f5364c.json",
+      "method": "GET",
+      "url": "https://rnacentral.org/api/v1/overlap/region/homo_sapiens/11:5225464-5229395",
+      "retrieved_at": "2026-11-06T14:38:45.888908+00:00",
+      "wire_sha256": "e91f89316da85eecfa26c1deb96ace99d63dd5d1df07e53582990603fbe0420e"
+    },
+    {
+      "file": "91a54e92ed5292d08d8601f0b33f2f356a4943696da393a56c43c7cbba4a650d.json",
+      "method": "GET",
+      "url": "https://rest.uniprot.org/uniprotkb/search",
+      "retrieved_at": "2026-11-06T14:41:04.432690+00:00",
+      "wire_sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+    },
+    {
+      "file": "a3219c645329389c5b148859145eb2c4c0266b828a100a57bea94ce7a13a41d5.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/lookup/symbol/homo_sapiens/NEAT1",
+      "retrieved_at": "2026-11-06T14:41:03.542020+00:00",
+      "wire_sha256": "a671d52a8f6c78ae511d77b64862ef81915a83e78c70d859419f8144cf7e1fe0"
+    },
+    {
+      "file": "a615efc4e85956123a0aa5d5fd2fbb3956d680d70a9a1e13e341d49e8309a0a6.json",
+      "method": "GET",
+      "url": "https://rest.uniprot.org/uniprotkb/search",
+      "retrieved_at": "2026-11-06T14:37:49.364606+00:00",
+      "wire_sha256": "9ef4c5f619094ce0abaae03b33eb57daa3100b2f723cb7eeceda8d5cbbfabc42"
+    },
+    {
+      "file": "a6998744f39353a80d2d8d7e2bca028ead864de06bcbdce3c6c5ea843e69b6c2.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/lookup/symbol/homo_sapiens/EGFR",
+      "retrieved_at": "2026-11-06T14:37:48.237421+00:00",
+      "wire_sha256": "e24c037fc7a92f229d1f2e02e0619edb7f54f47711ee9f832ca36772ceaf6cbc"
+    },
+    {
+      "file": "aea3546ef7968228323b9454dae40723c85df1eaf1653ff19dca751342150485.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/lookup/symbol/homo_sapiens/TP53",
+      "retrieved_at": "2026-11-06T14:37:33.673183+00:00",
+      "wire_sha256": "494a24763ecdd2a9ebb67ae15134949b2a7b9231f9f33c5fc8e5b3a5824b01f1"
+    },
+    {
+      "file": "afd20ffdd3cbcfeb663923efdd3b9612ce563ab63962b0b7f433d4fa63df6dd5.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/lookup/symbol/homo_sapiens/KRAS",
+      "retrieved_at": "2026-11-06T14:39:08.257573+00:00",
+      "wire_sha256": "6711e9591142a808556c459e2eea535699c5623c1730fa93a1eff78b6fa23332"
+    },
+    {
+      "file": "b7e19a67cff3e0660a5cbdd0ad3938c0f610697ab02c1471907a6092f90ccf52.json",
+      "method": "GET",
+      "url": "https://rest.uniprot.org/uniprotkb/search",
+      "retrieved_at": "2026-11-06T14:38:14.733669+00:00",
+      "wire_sha256": "ffbc8a276d4b575ab51c32bbe1c728b5194237068d966de81ac0f4d02fedecac"
+    },
+    {
+      "file": "b83549224ce6634ccb819b10979abf286a2601f84c5180b2e958939a4243c0b0.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/lookup/symbol/homo_sapiens/CFTR",
+      "retrieved_at": "2026-11-06T14:45:50.227079+00:00",
+      "wire_sha256": "756e85aca333959014f38c2b6e1b95fd3520c41edb3f13d52f5d27d001d13f7b"
+    },
+    {
+      "file": "bc366176cd1cbe3702ad563593ee66f715a50486840697d36630361c5292baca.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/sequence/region/homo_sapiens/17:43044292..43170245:1",
+      "retrieved_at": "2026-11-06T14:46:11.395484+00:00",
+      "wire_sha256": "e215700d546ce0fa2ce0f350ce1e94405bc594d28318dcc7890d3cf6b4d7a2ba"
+    },
+    {
+      "file": "bc7a01ba8d25868ee97cda0690e62010ef0fa4cc4416eab7116527e6debf397a.json",
+      "method": "GET",
+      "url": "https://rnacentral.org/api/v1/overlap/region/homo_sapiens/7:117287120-117715971",
+      "retrieved_at": "2026-11-06T14:46:00.446690+00:00",
+      "wire_sha256": "3c35f136142016e674d8b31ab3b3e3189434e78c73e07221255849eec718d8ce"
+    },
+    {
+      "file": "bd7e7f62a8b9716034142607f69b6a91c948baaf15fe5ef89ea61d59088381d1.json",
+      "method": "POST",
+      "url": "https://rest.ensembl.org/vep/homo_sapiens/region",
+      "retrieved_at": "2026-11-06T14:49:13.171837+00:00",
+      "wire_sha256": "dac605286661952d5cdacc89bcfe66b77571dd4b50fffa552d1899e94c670e05"
+    },
+    {
+      "file": "be54e271611fa0945733ac1226c7d59272ac65ae26b1c55e61176802b69283f9.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/sequence/region/homo_sapiens/11:5225464..5229395:1",
+      "retrieved_at": "2026-11-06T14:48:01.393054+00:00",
+      "wire_sha256": "442651008d54a8013f340713b073566d4d51066e22bc1344dbc80a820d41025c"
+    },
+    {
+      "file": "c3d8d5d090f8f2a91eb618042ffb6b50959df39c3bf6ddbac922e42ffef82a69.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/sequence/region/homo_sapiens/11:65422774..65445540:1",
+      "retrieved_at": "2026-11-06T14:48:45.458901+00:00",
+      "wire_sha256": "785c2b672a366f595d1c77ba3a8c17cb5a7b0c250733c24fdcbf7710c5311901"
+    },
+    {
+      "file": "c6d684874362c8beed326cc0344306ac70e3cf3d5e787c8521fceefb2b6a0c40.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/lookup/symbol/homo_sapiens/BRCA1",
+      "retrieved_at": "2026-11-06T14:36:47.659143+00:00",
+      "wire_sha256": "c1dc6175c558679c294129e0f85121040e1ad34f1263a6e7ea5e89a12c754494"
+    },
+    {
+      "file": "ca7e2f5a820d1ecab1a3c039ea728a6fa278f51cf8d4000664a62c550135f85c.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/sequence/region/homo_sapiens/13:32315086..32400268:1",
+      "retrieved_at": "2026-11-06T14:46:15.436128+00:00",
+      "wire_sha256": "58dd392f391781b5653ebdabce5393c901f7c1376e01ec13c5f0703db0ac649e"
+    },
+    {
+      "file": "d974e5a887372c9c97c38ee84a0db86b205556f9b78251eec2ee6df9182c6629.json",
+      "method": "POST",
+      "url": "https://rest.ensembl.org/vep/homo_sapiens/region",
+      "retrieved_at": "2026-11-06T14:49:10.181536+00:00",
+      "wire_sha256": "44234b13339cf610f7069429304dd53e9f4fcbbb9a418456eb0a46fb3f937222"
+    },
+    {
+      "file": "e593bc41c4a46a438b2e0b0732624a980c1aeb5ff71837a9b8162f95202c5f80.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/lookup/symbol/homo_sapiens/BRCA2",
+      "retrieved_at": "2026-11-06T14:37:12.338616+00:00",
+      "wire_sha256": "c2ebdf743301ca1ec6785a0d0c9e9440fb97fda9a79fb0defef9939c58a33e15"
+    },
+    {
+      "file": "e779c142bdbc8fd9b0330b175042e6e06877cb43407fbd7aec67e439b1d8a282.json",
+      "method": "GET",
+      "url": "https://rnacentral.org/api/v1/overlap/region/homo_sapiens/13:32315086-32400268",
+      "retrieved_at": "2026-11-06T14:37:20.532400+00:00",
+      "wire_sha256": "efef523b9dd4c8023db0e9215576c8ac95b0963b9d491bee8feae0e699fb0511"
+    },
+    {
+      "file": "ec362c79d7a6784d1f30a6397175819348cd9f2346b97fccb805d73b85933768.json",
+      "method": "GET",
+      "url": "https://rest.uniprot.org/uniprotkb/search",
+      "retrieved_at": "2026-11-06T14:36:49.196099+00:00",
+      "wire_sha256": "033fb058e060ff4aa98ff7b6eb75c81281e5e182b65c2150744cedad9d43a049"
+    },
+    {
+      "file": "f7d1cee73d0d61fc7f17ba8622046ed832041798a8860e8846d22ca6c3087844.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/lookup/symbol/homo_sapiens/MALAT1",
+      "retrieved_at": "2026-11-06T14:39:54.351369+00:00",
+      "wire_sha256": "4966ced2ce51f00be1795d16e08a2a7c774b451c7413991755b3aeedf1176fef"
+    },
+    {
+      "file": "f89122586354052997948961cd7c599cb6c12527a8461ddcd3527ac648b85c83.json",
+      "method": "GET",
+      "url": "https://rnacentral.org/api/v1/overlap/region/homo_sapiens/19:44903787-44909396",
+      "retrieved_at": "2026-11-06T14:38:24.376751+00:00",
+      "wire_sha256": "a3d4c2aac5fe5e0fbb191e5f61a3cf1fe55b71929c5e8602afbd5d89455c15a8"
+    },
+    {
+      "file": "fa71ea6db3b227ee27d5f25d492018fcd467983d115de032ecbb1d4cd38b0019.json",
+      "method": "GET",
+      "url": "https://rest.ensembl.org/lookup/symbol/homo_sapiens/APOE",
+      "retrieved_at": "2026-11-06T14:38:14.192452+00:00",
+      "wire_sha256": "ce5a1e349fafb80705a804991ed8f7f0323105ab4204777299adaafbfb8d21ec"
+    }
+  ]
+}

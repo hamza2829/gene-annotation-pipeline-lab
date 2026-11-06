@@ -1,4 +1,5 @@
 from pathlib import Path
+import math
 import re
 
 import yaml
@@ -15,8 +16,13 @@ def load_config(path):
     if config["assembly"] != "GRCh38" or config["species"] != "homo_sapiens":
         raise ValueError("This lab supports homo_sapiens GRCh38 only")
     for key in ["timeout", "attempts", "cache_ttl", "samples", "markers", "vep_batch"]:
-        if not isinstance(config[key], (int, float)) or config[key] <= 0:
+        if isinstance(config[key], bool) or not isinstance(config[key], (int, float)) or not math.isfinite(config[key]) or config[key] <= 0:
             raise ValueError(f"{key} must be positive")
+    for key in ["attempts", "samples", "markers", "vep_batch", "seed", "planted_index"]:
+        if isinstance(config[key], bool) or not isinstance(config[key], int):
+            raise ValueError(f"{key} must be an integer")
+    if not isinstance(config["effect_beta"], (int, float)) or not math.isfinite(config["effect_beta"]):
+        raise ValueError("effect_beta must be finite")
     if config["attempts"] > 10 or not 0 < config["alpha"] < 1 or not 0 <= config["planted_index"] < config["markers"]:
         raise ValueError("Invalid attempts, alpha or planted index")
     for key in ["backoff", "max_backoff", "min_interval"]:
