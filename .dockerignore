@@ -1,0 +1,8 @@
+.git
+artifacts
+ci-review
+__pycache__
+.pytest_cache
+*.egg-info
+tests
+ci

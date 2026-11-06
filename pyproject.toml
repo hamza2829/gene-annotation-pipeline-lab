@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gene-annotation-pipeline-lab"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["requests>=2.32,<3", "pandas>=2.2,<3", "numpy>=2,<3", "scipy>=1.14,<2", "statsmodels>=0.14,<1", "matplotlib>=3.9,<4", "pyyaml>=6,<7"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9", "pytest-cov>=6,<8", "responses>=0.25,<1", "ruff>=0.14,<1"]
+ci = ["playwright==1.56.0"]
+
+[project.scripts]
+gene-lab = "gene_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["live: opt-in public API test; disabled unless RUN_LIVE=1"]
+
+[tool.coverage.run]
+source = ["gene_lab"]
+
+[tool.coverage.report]
+fail_under = 85
+show_missing = true
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
